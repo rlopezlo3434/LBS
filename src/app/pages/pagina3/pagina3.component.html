@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="preview">
+        <h3 style="display: flex;margin-bottom: 10px;margin-top: 10px;text-align:justify;"><span
+                style="margin-right: 20px;">B</span>Áreas de influencia social indirecta (AISI)</h3>
+        <p style="text-align:justify;margin-bottom: 5px;">En cuanto al área de influencia social indirecta (AISI), está conformada por <span
+                class="highlight">{{ datos.aisiComponente1 || '...' }}</span>.</p>
+        <p style="text-align:justify;margin-bottom: 5px;">Para determinar el AISI se está teniendo en cuenta que <span
+                class="highlight">{{ datos.aisiComponente2 || '...' }}</span>.</p>
+    </div>
+
+    <div class="formulario">
+        <h3>Áreas de influencia social directa (AISI)</h3>
+
+        <label>Seleccionar Elemento:</label>
+        <select [(ngModel)]="seleccionActual">
+            <option value="">-- Seleccione --</option>
+            <option *ngFor="let opcion of opcionesFormateadas" [value]="opcion">
+                {{ opcion }}
+            </option>
+        </select>
+
+        <button (click)="agregarSeleccionado()" [disabled]="!seleccionActual">Agregar</button>
+
+        <button (click)="seleccionarTodos()">Seleccionar Todos</button>
+
+        <h3>Elementos Seleccionados</h3>
+        <ul>
+            <li *ngFor="let item of datos.seleccionadosAISI; let i = index">
+              {{ item }}
+              <button (click)="eliminarSeleccionado(i)" style="margin-left: 10px;">❌</button>
+            </li>
+          </ul>
+       
+          <label>AISI Componente 1:</label>
+        <input type="text" [(ngModel)]="datos.aisiComponente1">
+
+        <label>AISI Componente 2:</label>
+        <input type="text" [(ngModel)]="datos.aisiComponente2">
+
+        <button (click)="regresar()">Atrás</button>
+        <button (click)="siguientePaso()">Siguiente</button>
+
+    </div>
+</div>

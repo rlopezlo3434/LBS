@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .preview {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+  }
+  
+  .formulario {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #fff;
+  }
+  
+  h2, h3 {
+    margin-bottom: 10px;
+  }
+  
+  .highlight {
+    font-weight: bold;
+    color: black;
+    background-color: yellow;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
