@@ -23,7 +23,27 @@ export class FormularioService {
     aisiComponente2: '',
     seleccionados: [],
     seleccionadosAISI: [],
-
+    cantidadEntrevistas: '',
+    cantidadEncuestas: '',
+    fechaTrabajoCampo: '',
+    componenteFuentesPrimarias1: '',
+    componenteFuentesPrimarias2: '',
+    justificacionAISI: '',
+    pagina4DistDpto: '',
+    consultora: '',
+    entrevistados: [],
+    muestra: '',
+    universo: '',
+    margen: '',
+    nameuniverso: '',
+    variable: '',
+    fuente: '',
+    nivel: '',
+    detalleEncuesta: '',
+    precisionEncuesta: '',
+    encuestadoPorcentaje: '',
+    noEncuestados: '',
+    noResultadoPorcentaje: '',
   };
 
   jsonData: any[] = [];
